@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Attendance App</string>
+    <string name="data_saved_message">Data Saved</string>
+
+</resources>
