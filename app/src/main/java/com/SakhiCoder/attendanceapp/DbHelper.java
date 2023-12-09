@@ -188,56 +188,6 @@ public class DbHelper extends SQLiteOpenHelper {
         cursor.close();
         return status;
     }
-
-
-//    String getStatus(long sid, String date) {
-//        String status = "P";
-//        SQLiteDatabase database = this.getReadableDatabase();
-//        String[] columns = {STATUS_KEY};
-//        String whereClause = S_ID + "=? AND " + DATE_KEY + "=?";
-//        String[] whereArgs = {String.valueOf(sid), date};
-//
-//        Cursor cursor = database.query(STATUS_TABLE_NAME, columns, whereClause, whereArgs, null, null, null);
-//
-//        if (cursor.moveToFirst()) {
-//            int columnIndex = cursor.getColumnIndex(STATUS_KEY);
-//            if (columnIndex != -1) {
-//                status = cursor.getString(columnIndex);
-//            }
-//        }
-//        cursor.close();
-//        return status;
-//    }
-//    String getStatus(long sid, String date){
-//        String status = null;
-//        SQLiteDatabase database = this.getReadableDatabase();
-//        String whereClause = DATE_KEY + "='" + date + "' AND " + S_ID + "=" + sid;
-//        Cursor cursor = database.query(STATUS_TABLE_NAME,null,whereClause,null,null,null,null);
-//        if (cursor.moveToFirst())
-//            status = cursor.getString(cursor.getColumnIndex(STATUS_ID));
-//        return status;
-//    }
-
-
-//    String getStatus(long sid, String date) {
-//        String status = "P";
-//        SQLiteDatabase database = this.getReadableDatabase();
-//        String whereClause = DATE_KEY + "='" + date + "' AND " + S_ID + "=" + sid;
-//        Cursor cursor = database.query(STATUS_TABLE_NAME, null, whereClause, null, null, null, null);
-//
-//        if (cursor.moveToFirst()) {
-//            int statusValue = cursor.getInt(cursor.getColumnIndexOrThrow(STATUS_ID));
-//
-//            // Assuming 1 represents present and 0 represents absent in the database
-//            if (statusValue == 1) {
-//                status = "A";
-//            }
-//        }
-//
-//        cursor.close();
-//        return status;
-//    }
-
     //Data_List
     Cursor getDistinctMonths(long cid){
         SQLiteDatabase database = this.getReadableDatabase();
